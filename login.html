@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сторінка авторизації для входу в систему.">
+    <title>Авторизація</title>
+
+    <!-- Підключення CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Підключення шрифтів -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Підключення JS -->
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <!-- Верхня частина сторінки -->
+    <header>
+        <h1>Система Авторизації</h1>
+    </header>
+
+    <!-- Основний вміст сторінки -->
+    <main>
+        <section>
+            <h2>Увійти до свого облікового запису</h2>
+            <form id="loginForm" action="javascript:void(0);">
+                <fieldset>
+                    <legend>Введіть ваші дані:</legend>
+
+                    <!-- Поле для логіна -->
+                    <label for="username">Логін:</label>
+                    <input type="text" id="username" name="username" placeholder="Введіть логін" required>
+
+                    <!-- Поле для пароля -->
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" placeholder="Введіть пароль" required>
+
+                    <!-- Кнопка відправки -->
+                    <button type="submit">Увійти</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!-- Нижня частина сторінки -->
+    <footer>
+        <p>&copy; 2024 Ваша компанія. Усі права захищено.</p>
+        <nav>
+            <ul>
+                <li><a href="/privacy">Політика конфіденційності</a></li>
+                <li><a href="/help">Допомога</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        // Обработчик формы авторизации
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвратить отправку формы
+
+            // Перенаправляем на главную страницу
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

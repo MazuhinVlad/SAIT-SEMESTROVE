@@ -1,0 +1,161 @@
+/* Скидання відступів та маргінів для всіх елементів */
+* {
+    margin: 0; /* Скидає відступи */
+    padding: 0; /* Скидає внутрішні відступи */
+    box-sizing: border-box; /* Включає бордери та паддінги в загальний розмір елемента */
+}
+
+/* Скидання стилів для списків */
+ul, ol {
+    list-style: none; /* Вилучає маркери списків */
+}
+
+/* Стилі для body */
+body {
+    font-family: 'Roboto', sans-serif; /* Шрифт для сторінки */
+    display: flex; /* Використовує Flexbox для компонуванння елементів */
+    flex-direction: column; /* Розташовує елементи по вертикалі */
+    min-height: 100vh; /* Висота body — 100% від вікна */
+}
+
+/* Стилі для заголовка */
+header {
+    background-color: #333; /* Темний фон */
+    color: white; /* Білий текст */
+    padding: 20px; /* Внутрішні відступи */
+    text-align: center; /* Центрує текст */
+}
+
+/* Стилі для навігаційного меню */
+nav ul {
+    display: flex; /* Використовує Flexbox */
+    justify-content: center; /* Центрує елементи меню */
+    gap: 15px; /* Відстань між елементами */
+}
+nav a {
+    text-decoration: none; /* Вимикає підкреслення */
+    color: white; /* Білий текст */
+    font-weight: bold; /* Текст жирним шрифтом */
+}
+
+/* Основний контент */
+main {
+    display: flex; /* Використовує Flexbox */
+    flex-direction: column; /* Вертикальне розташування елементів */
+    gap: 200px; /* Відстань між елементами */
+    padding: 20px; /* Внутрішні відступи */
+    flex: 1; /* Займає доступний простір */
+}
+
+/* Стилі для секцій */
+section {
+    padding: 20px; /* Відступи всередині секції */
+    background-color: #fafafa; /* Світлий фон */
+    border-radius: 8px; /* Закруглені кути */
+}
+
+/* Стилі для футера */
+footer {
+    background-color: #333; /* Темний фон */
+    color: white; /* Білий текст */
+    padding: 20px; /* Внутрішні відступи */
+    text-align: center; /* Центрує текст */
+}
+
+/* Стилі для aside (бокова панель) */
+aside {
+    background-color: #f9f9f9; /* Світлий фон */
+    padding: 20px; /* Внутрішні відступи */
+    border-radius: 8px; /* Закруглені кути */
+    margin-top: 20px; /* Відступ зверху */
+}
+
+/* Fixed позиціонування */
+.fixed-banner {
+    position: fixed; /* Фіксований елемент */
+    top: 0; /* Встановлює відступ зверху */
+    left: 0; /* Встановлює відступ зліва */
+    width: 100%; /* Ширина на весь екран */
+    background-color: #222; /* Темний фон */
+    color: white; /* Білий текст */
+    padding: 10px; /* Внутрішні відступи */
+    text-align: center; /* Центрує текст */
+}
+
+/* Створення контейнера з трьома елементами */
+.flex-container {
+    display: flex; /* Використовує Flexbox */
+    justify-content: space-between; /* Вирівнює елементи по краях */
+    align-items: center; /* Центрує по вертикалі */
+    gap: 20px; /* Відстань між елементами */
+}
+
+/* Створення сітки з трьох стовпців */
+.grid-container {
+    display: grid; /* Використовує Grid */
+    grid-template-columns: repeat(3, 1fr); /* Три рівні стовпці */
+    gap: 20px; /* Відстань між елементами */
+}
+
+/* Адаптивний дизайн для різних екранів */
+@media (max-width: 600px) {
+    .container {
+        background-color: lightblue; /* Легкий блакитний фон для малих екранів */
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .container {
+        background-color: lightgreen; /* Легкий зелений фон для середніх екранів */
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        background-color: lightcoral; /* Легкий кораловий фон для великих екранів */
+    }
+}
+
+/* Стилізація форми */
+form {
+    max-width: 400px; /* Максимальна ширина форми */
+    margin: 0 auto; /* Центрування форми */
+    padding: 20px; /* Внутрішні відступи */
+    background-color: white; /* Білий фон */
+    border-radius: 8px; /* Закруглені кути */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Тінь навколо форми */
+}
+
+form h2 {
+    font-size: 2rem; /* Розмір заголовка */
+    margin-bottom: 20px; /* Відступ знизу */
+}
+
+form label {
+    display: block; /* Виводить елемент на новому рядку */
+    margin-bottom: 8px; /* Відступ знизу */
+    font-weight: bold; /* Жирний текст */
+}
+
+form input {
+    width: 100%; /* Ширина інпута на всю форму */
+    padding: 10px; /* Внутрішні відступи */
+    margin-bottom: 15px; /* Відступ знизу */
+    border: 1px solid #ddd; /* Тонка сіренька обводка */
+    border-radius: 4px; /* Закруглені кути */
+}
+
+form button {
+    width: 100%; /* Ширина кнопки на всю форму */
+    padding: 12px; /* Внутрішні відступи */
+    background-color: #333; /* Темний фон */
+    color: white; /* Білий текст */
+    border: none; /* Без бордера */
+    border-radius: 4px; /* Закруглені кути */
+    cursor: pointer; /* Курсор у вигляді руки */
+    font-size: 1rem; /* Розмір шрифту */
+}
+
+form button:hover {
+    background-color: #555; /* Трохи світліший фон при наведенні */
+}
